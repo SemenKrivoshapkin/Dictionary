@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 800px;
+}
+
+.dark body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+}
+
+.dark .logo {
+    background-color: gray;
+}
+
+.selectorAndTheme {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+  
+.switch input {
+    display:none;
+}
+  
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+  
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+  
+input:checked + .slider {
+    background-color: gray;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme-icon {
+    background-color: gray;
+}
+
+.dark .theme-icon {
+    background-color: black;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+}
+
+#selector {
+    border: none;
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 7px;
+}
+
+#input {
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 7px;
+}
+
+.dark #input, .dark #selector {
+    background-color: gray;
+    color: white;
+}
+
+#button {
+    padding: 5px 5px;
+    border-radius: 7px;
+}
+
+.dark #button {
+    background-color: gray;
+    color: white;
+}
+
+.no-definitions-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 20px;
+}
+
+.title h2 {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.phonetic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 200px;
+}
+
+.phonetic img {
+    height: 30px;
+}
+
+.phoneticUK {
+    color: red;
+}
+
+.phoneticUS {
+    color: blue;
+}
+
+.part-of-speech {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.part-of-speech h3 {
+    padding: 20px 0;
+}
+
+ .part-of-speech-hr {
+    width: 50%;
+}
+
+ h4 {
+    color: gray;
+    padding: 15px 0;
+}
+
+ li {
+    margin-left: 30px;
+    padding: 2px 0;
+}
+
+.synonyms-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.antonyms-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.word-link {
+    background-color: white;
+    color: purple;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.dark .word-link {
+    background-color: black;
+}
+
+.source-link {
+    margin-top: 20px;
+}
+
+/* https://codepen.io/rjhenriquez/pen/gZyRwR */
